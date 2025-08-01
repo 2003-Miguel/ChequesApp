@@ -46,7 +46,15 @@ namespace VisorFacturaApp
                 pictureBoxFactura.Image?.Dispose();
                 pictureBoxFactura.Image = Image.FromFile(archivosFacturas[indice]);
                 pictureBoxFactura.SizeMode = PictureBoxSizeMode.Zoom;
+
+                ActualizarBotonesNavegacion();
             }
+        }
+
+        private void ActualizarBotonesNavegacion()
+        {
+            btnAnterior.Enabled = indiceActual > 0;
+            btnSiguiente.Enabled = indiceActual < archivosFacturas.Length - 1;
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
