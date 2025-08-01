@@ -22,7 +22,6 @@ namespace VisorFacturaApp
 
             if (!string.IsNullOrEmpty(cedula))
             {
-                // Buscar la primera factura que contenga la cédula, si existe
                 for (int i = 0; i < archivosFacturas.Length; i++)
                 {
                     if (Path.GetFileNameWithoutExtension(archivosFacturas[i]).Contains(cedula))
@@ -34,11 +33,9 @@ namespace VisorFacturaApp
             }
             else
             {
-                // Si no hay cédula, inicia desde la primera factura
                 indiceActual = 0;
             }
 
-            // Cargar la factura inicial
             CargarFactura(indiceActual);
         }
 
@@ -46,7 +43,7 @@ namespace VisorFacturaApp
         {
             if (indice >= 0 && indice < archivosFacturas.Length)
             {
-                pictureBoxFactura.Image?.Dispose(); // Liberar imagen anterior si existe
+                pictureBoxFactura.Image?.Dispose();
                 pictureBoxFactura.Image = Image.FromFile(archivosFacturas[indice]);
                 pictureBoxFactura.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -78,10 +75,9 @@ namespace VisorFacturaApp
 
                 if (File.Exists(rutaRegistro))
                 {
-                    string nombreArchivo = Path.GetFileNameWithoutExtension(archivosFacturas[indiceActual]); // Ejemplo: "40234554687"
+                    string nombreArchivo = Path.GetFileNameWithoutExtension(archivosFacturas[indiceActual]);
                     string[] lineas = File.ReadAllLines(rutaRegistro);
 
-                    // Buscamos las líneas que correspondan a esta cédula
                     List<string> lineasCoincidentes = new List<string>();
                     foreach (string linea in lineas)
                     {
