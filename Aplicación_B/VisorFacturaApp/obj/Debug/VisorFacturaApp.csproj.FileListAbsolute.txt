@@ -1,0 +1,10 @@
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\bin\Debug\VisorFacturaApp.exe.config
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\bin\Debug\VisorFacturaApp.exe
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\bin\Debug\VisorFacturaApp.pdb
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.Form1.resources
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.Properties.Resources.resources
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.csproj.GenerateResource.cache
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.exe
+C:\Users\Usuario\Downloads\Ejemplo\VisorFacturaApp\VisorFacturaApp\obj\Debug\VisorFacturaApp.pdb
