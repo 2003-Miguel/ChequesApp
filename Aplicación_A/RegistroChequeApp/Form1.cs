@@ -27,8 +27,6 @@ namespace RegistroChequeApp
                 MessageBox.Show("Debe crear las carpetas necesarias antes de registrar el cheque.\nUse el botón 'Crear Carpetas'.");
                 return;
             }
-
-            // Validar campos vacíos y formato
             if (string.IsNullOrWhiteSpace(txtNumeroCheque.Text))
             {
                 MessageBox.Show("Debe ingresar el número de cheque.");
@@ -39,13 +37,11 @@ namespace RegistroChequeApp
                 MessageBox.Show("El número de cheque debe ser un número entero y no negativo.");
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtConcepto.Text))
             {
                 MessageBox.Show("Debe ingresar el concepto.");
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtCedula.Text))
             {
                 MessageBox.Show("Debe ingresar la cédula.");
@@ -56,7 +52,6 @@ namespace RegistroChequeApp
                 MessageBox.Show("La cédula debe contener exactamente 11 dígitos numéricos y no puede ser negativa.");
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtFactura.Text))
             {
                 MessageBox.Show("Debe ingresar el número de factura.");
@@ -67,7 +62,6 @@ namespace RegistroChequeApp
                 MessageBox.Show("El número de factura debe ser un número entero y no negativo.");
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtMontoNum.Text))
             {
                 MessageBox.Show("Debe ingresar el monto numérico.");
@@ -78,14 +72,12 @@ namespace RegistroChequeApp
                 MessageBox.Show("El monto numérico debe ser un valor decimal y no negativo.");
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtMontoLetra.Text))
             {
                 MessageBox.Show("Debe ingresar el monto en letras.");
                 return;
             }
 
-            // Todos los campos válidos, usar las cadenas originales para guardar y pasar parámetros
             string numeroCheque = txtNumeroCheque.Text;
             string concepto = txtConcepto.Text;
             string cedula = txtCedula.Text;
@@ -98,7 +90,6 @@ namespace RegistroChequeApp
             Directory.CreateDirectory(Path.GetDirectoryName(rutaArchivo));
             File.AppendAllText(rutaArchivo, $"Cheque: {numeroCheque}, Cliente: {cedula}, Fecha: {fecha}, Monto: {montoNum} ({montoLetra}), Factura: {factura}\n");
 
-            // Crear imagen ficticia de la factura
             string rutaImagen = $@"C:\Facturas\{cedula}.png";
             Directory.CreateDirectory(Path.GetDirectoryName(rutaImagen));
             using (Bitmap bmp = new Bitmap(300, 100))
@@ -114,7 +105,6 @@ namespace RegistroChequeApp
                 bmp.Save(rutaImagen);
             }
 
-            // Ejecutar App B pasando la cédula (como string)
             try
             {
                 string rutaAppB = @"C:\Facturas\VisorFacturaApp.exe";
